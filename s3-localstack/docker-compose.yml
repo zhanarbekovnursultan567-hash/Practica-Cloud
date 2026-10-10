@@ -1,0 +1,11 @@
+services:
+  localstack:
+    image: localstack/localstack:3.8.1
+    network_mode: host
+    environment:
+      SERVICES: s3
+    volumes:
+      - ls_data:/var/lib/localstack
+
+volumes:
+  ls_data:
